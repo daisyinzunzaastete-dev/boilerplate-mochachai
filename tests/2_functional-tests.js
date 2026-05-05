@@ -68,7 +68,6 @@ suite('Functional Tests', function () {
 
 const Browser = require('zombie');
 
-process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
 Browser.site = 'http://localhost:' + (process.env.PORT || 3000);
 
 suite('Functional Tests with Zombie.js', function () {
