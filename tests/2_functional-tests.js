@@ -66,6 +66,10 @@ suite('Functional Tests', function () {
   });
 });
 
+const util = require('util');
+if (!util.isRegExp) {
+  util.isRegExp = (value) => value instanceof RegExp;
+}
 const Browser = require('zombie');
 
 Browser.site = 'http://127.0.0.1:' + (process.env.PORT || 3000);
